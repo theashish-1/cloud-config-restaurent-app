@@ -8,7 +8,7 @@ spring:
   datasource:
     url: ${PROD_DB_URL:jdbc:mysql://localhost:3306/food_service?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=Asia/Kolkata&allowPublicKeyRetrieval=true}
     username: ${PROD_DB_USERNAME:root}
-    password: '{ciper}2cd946a6158868716e874c57167ddc290ad7dddb896376dca64665c91666dd65'
+    password: '{cipher}2cd946a6158868716e874c57167ddc290ad7dddb896376dca64665c91666dd65'
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 20
