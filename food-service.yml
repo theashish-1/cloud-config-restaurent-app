@@ -1,0 +1,31 @@
+server:
+  port: 9092
+
+# ===================================================================
+# COMMON SPRING CONFIGURATIONS (Shared across dev, prod, test)
+# ===================================================================
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+# ===================================================================
+# EUREKA SERVICE DISCOVERY (Shared)
+# ===================================================================
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# ===================================================================
+# ACTUATOR & MONITORING (Shared)
+# ===================================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
